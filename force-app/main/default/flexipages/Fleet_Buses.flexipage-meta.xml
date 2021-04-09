@@ -7,13 +7,18 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>lWCList</componentName>
+                <componentName>busList</componentName>
             </componentInstance>
         </itemInstances>
         <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>busFullDetails</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>

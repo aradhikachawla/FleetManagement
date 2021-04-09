@@ -1,5 +1,6 @@
 public with sharing class DataCraetionClass {
 
+    @invocableMethod
     public static void createData(){
         try{
            

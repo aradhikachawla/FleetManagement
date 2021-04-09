@@ -3,6 +3,8 @@ public class TestDataFactory {
     public static List<Bus__c> createBus(integer count){
     
     List<Bus__c> allBuses = new  List<Bus__c>();
+            List<sensor__c> allsensors = new  List<sensor__c>();
+
          for (integer i=1;i<=count;i++){     
        		 Bus__c newbus =  new  Bus__c();
         	 newbus.Air_conditioner__c = true;
@@ -11,10 +13,12 @@ public class TestDataFactory {
         	 newbus.Maximum_Capacity__c='60';
         	 newbus.Current_Status__c = 'Ready For Use';
              newbus.Bus_Image__c='https://media.istockphoto.com/photos/white-tour-bus-picture-id974313674?k=6&m=974313674&s=612x612&w=0&h=YHb67YOSOvp7-npMNsWXELg3d83TzaYS1TgLraQGi0o=';
-             
-
              allBuses.add(newbus); 
-        }
+             
+             
+      }
+        
+        
         
         List<Bus__c> allBuses1 = new  List<Bus__c>();
          for (integer i=1;i<=count;i++){     
@@ -70,6 +74,6 @@ public class TestDataFactory {
         allBuses.addall(allBuses4);
 
       System.debug(allBuses);
-        return allBuses;
+      return allBuses;
     }
 }

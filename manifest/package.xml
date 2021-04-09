@@ -84,6 +84,41 @@
     </types>
 
     
+
+<types>
+      <members>LWCController</members>
+      <name>ApexClass</name>
+  </types>
+ 
+    <types>
+      <members>SampleMessageChannel</members>
+      <name>LightningMessageChannel</name>
+  </types>
+  <types>
+      <members>AnotherMessageChannel</members>
+      <name>LightningMessageChannel</name>
+  </types>
+   <types>
+      <members>busDetail</members>
+      <name>LightningComponentBundle</name>
+  </types>
+  <types>
+      <members>busFullDetails</members>
+      <name>LightningComponentBundle</name>
+  </types>
+  <types>
+      <members>busResaleTile</members>
+      <name>LightningComponentBundle</name>
+  </types>
+  <types>
+      <members>busList</members>
+      <name>LightningComponentBundle</name>
+  </types>
+  <types>
+ 
+      <members>Fleet_Buses</members>
+      <name>FlexiPage</name>
+  </types>
     
 
     <version>51.0</version>
