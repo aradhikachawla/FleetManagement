@@ -7,7 +7,7 @@ public with sharing class LWCController {
     @AuraEnabled(cacheable=true)
     public static List<Bus__c> getBuses(){
 
-        List<Bus__c> listBus = [select Id,  Name,Resale_Value__c,Year__c,Bus_Image__c, Odometer_Records__c, Maximum_Capacity__c  from Bus__c with SECURITY_ENFORCED];
+        List<Bus__c> listBus = [select Id,  Name,Resale_Value__c,Year__c,Bus_Image__c, Odometer_Reading__c, Maximum_Capacity__c  from Bus__c with SECURITY_ENFORCED];
         System.debug('listBus:='+ listBus);
 
     return listBus;
