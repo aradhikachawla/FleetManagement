@@ -162,16 +162,7 @@
         <field>Maintenance_record__c.Tire_conditions__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>sensor__c.Location__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>sensor__c.Odometer_Reading__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
+    
     <hasActivationRequired>false</hasActivationRequired>
     <label>FleetManage</label>
     <objectPermissions>
@@ -201,15 +192,7 @@
         <object>Maintenance_record__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>sensor__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
+    
     <tabSettings>
         <tab>Bus__c</tab>
         <visibility>Visible</visibility>
@@ -226,8 +209,5 @@
         <tab>Maintenance_record__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
-    <tabSettings>
-        <tab>sensor__c</tab>
-        <visibility>Visible</visibility>
-    </tabSettings>
+    
 </PermissionSet>
