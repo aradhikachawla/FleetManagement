@@ -155,10 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Bus</label>
     <nameField>
-        <displayFormat>Bus-{0}</displayFormat>
         <label>Bus Name</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Buses</pluralLabel>
     <searchLayouts></searchLayouts>

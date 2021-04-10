@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bus_View_for_maintenance</fullName>
+    <columns>NAME</columns>
+    <columns>Latest_odometer_reading_when_serviced__c</columns>
+    <columns>Location__Latitude__s</columns>
+    <columns>Current_Status__c</columns>
+    <columns>Location__Longitude__s</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Maximum_Capacity__c</columns>
+    <columns>Garage__c</columns>
+    <columns>Odometer_Reading__c</columns>
+    <columns>Schedule_for_service__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Maximum_Capacity__c</field>
+        <operation>equals</operation>
+        <value>60</value>
+    </filters>
+    <label>Bus View for maintenance</label>
+</ListView>

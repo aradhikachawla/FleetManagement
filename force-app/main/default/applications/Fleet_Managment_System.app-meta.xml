@@ -14,7 +14,6 @@
     <tabs>Bus__c</tabs>
     <tabs>Garage__c</tabs>
     <tabs>Maintenance_record__c</tabs>
-    <tabs>sensor__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Fleet_Managment_System_UtilityBar</utilityBar>
 </CustomApplication>

@@ -1,10 +1,10 @@
 import { LightningElement, api} from 'lwc';
 import { createMessageContext, releaseMessageContext,APPLICATION_SCOPE,subscribe, unsubscribe, publish } from 'lightning/messageService';
 import ANOTHERMC from "@salesforce/messageChannel/AnotherMessageChannel__c";
-import NAME_FIELD from '@salesforce/schema/Bus__c.Name';
 import YEAR_FIELD from '@salesforce/schema/Bus__c.Year__c';
-import ODOMETER_FIELD from '@salesforce/schema/Bus__c.Odometer_Records__c';
-import IMAGE_FIELD from '@salesforce/schema/Bus__c.Bus_Image__c';
+import ODOMETER_FIELD from '@salesforce/schema/Bus__c.Odometer_Reading__c';
+import CAPACITY_FIELD from '@salesforce/schema/Bus__c.Maximum_Capacity__c';
+
 
 
 export default class busDetail extends LightningElement {
@@ -15,7 +15,7 @@ context1 = createMessageContext();
 @api receivedMessage
 @api busRec;
 @api objectApiName
-fields = [NAME_FIELD, YEAR_FIELD, ODOMETER_FIELD,IMAGE_FIELD];
+fields = [YEAR_FIELD, CAPACITY_FIELD, ODOMETER_FIELD];
 
 
  /////////publisher/////
