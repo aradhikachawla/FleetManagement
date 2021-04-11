@@ -149,11 +149,6 @@
         <field>Maintenance_record__c.Tire_conditions__c</field>
         <readable>true</readable>
     </fieldPermissions>
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> d61886761edd5ff9e5a14d22d06c485922d9634a
     <hasActivationRequired>false</hasActivationRequired>
     <label>FleetManagement</label>
     <objectPermissions>
@@ -199,8 +194,4 @@
         <tab>Maintenance_record__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
-<<<<<<< HEAD
-=======
-    
->>>>>>> d61886761edd5ff9e5a14d22d06c485922d9634a
 </PermissionSet>
