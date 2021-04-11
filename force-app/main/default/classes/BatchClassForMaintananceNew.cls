@@ -12,21 +12,24 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
             List<Bus__c> listBus =   [SELECT Id, Name, Bus_ID__c, Odometer_Reading__c, Maximum_Capacity__c, Current_Status__c,  Location__Latitude__s,Location__Longitude__s,Schedule_for_service__c FROM Bus__c where  Schedule_for_service__c = true with SECURITY_ENFORCED];
             System.debug('listBus:'+ listBus);
     }catch(Exception e){
-           System.debug('in catch:start'+ e.getStackTraceString()+e.getCause()+e.getMessage());
+                  System.debug('in catch:'+ e.getStackTraceString()+e.getCause()+e.getMessage());
 
     } 
-        return Database.getQueryLocator('SELECT Id,Name, Bus_ID__c, Odometer_Reading__c, Maximum_Capacity__c, Current_Status__c, Schedule_for_service__c, Location__Latitude__s,Location__Longitude__s FROM Bus__c where Schedule_for_service__c = true with SECURITY_ENFORCED');
+        return Database.getQueryLocator('SELECT Id,Name, Bus_ID__c, Odometer_Reading__c, Maximum_Capacity__c, Current_Status__c, Schedule_for_service__c, Location__Latitude__s,Location__Longitude__s FROM Bus__c where Schedule_for_service__c = true');
 
     }
   
     
      public void execute(Database.BatchableContext info, List<Bus__c> listBus) {		
    		 system.debug('execute');
-         try{
-		 List<Maintenance_record__c> listMain = new List<Maintenance_record__c>();       
+		 List<Maintenance_record__c> listMain = new List<Maintenance_record__c>();
+         
          for (Bus__c s: listBus){	
+           //  for (sensor__c sen: s.sensors__r){
              s.Current_Status__c = 'Scheduled for Maintenance' ;
              s.Latest_odometer_reading_when_serviced__c = s.Odometer_Reading__c;
+           //  s.loaction_of_the_bus__Latitude__s = sen.Location__Latitude__s;
+          //   s.loaction_of_the_bus__Longitude__s = sen.Location__Longitude__s;
              System.debug(calculateGarage(s)); 
              s.Garage__c = calculateGarage(s).id;
              Maintenance_record__c mainR = new Maintenance_record__c();
@@ -34,15 +37,15 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
              mainR.Garage__c = calculateGarage(s).id;
              mainR.Recorded_odometer__c = s.Odometer_Reading__c;
              mainR.Schedule_reason__c = 'Every 5000 Miles Service';
-             listMain.add(mainR);             
-         }     
+             listMain.add(mainR);
              
-         Database.insert(listMain, false);
-         Database.update(listBus, false);
-         }
-         catch(Exception e){
-             System.debug('in catch:=execute'+ e.getStackTraceString());          
-         }
+            // }
+         }       
+         
+         
+         insert listMain;
+         update  listBus;
+
    }
     
     
@@ -59,8 +62,6 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
     
     
     public static Garage__c calculateGarage(Bus__c s){
-        Garage__c found = new Garage__c();
-        try{
         Map<Garage__c, Double> mapGarage = new Map<Garage__c, Double>();
         List<Garage__c> listGarage = [select id, name,Location__Latitude__s, Location__Longitude__s from Garage__c ];      
         for (Garage__c g : listGarage){
@@ -71,10 +72,12 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
         }
         
         System.debug('mapGarage:'+mapGarage);
+        
         List<Double> newD = mapGarage.values();
         newD.sort();
         Double t= newD.get(0);
         System.debug('t:'+t );
+		Garage__c found = new Garage__c();
         for(Garage__c fg : mapGarage.keySet()){
             if (mapGarage.get(fg) == t ){
                  found  = fg;
@@ -84,12 +87,7 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
         
         System.debug('found:'+found  );
         System.debug('t:'+t  );
-        }
-        catch(Exception e){
-            System.debug('in catch:=calculateGarage'+ e.getStackTraceString());          
-    
-        }
-	return found;
+return found;
     }
     
 }

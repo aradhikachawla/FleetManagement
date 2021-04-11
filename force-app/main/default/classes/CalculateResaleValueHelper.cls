@@ -51,11 +51,15 @@ public with sharing class CalculateResaleValueHelper {
             		if (busResale.Year__c == 1972){
                 		resale = resale + sellPrice * .34 ;
             		}
+                
             		busResale.Resale_Value__c = resale;
             }
+            else {resale = null; busResale.Resale_Value__c = resale;}
+            
         }
     }
         
+    
             
     
     

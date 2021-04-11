@@ -3,7 +3,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>busList</componentName>
+                <componentName>busBeerList</componentName>
             </componentInstance>
         </itemInstances>
         <name>region1</name>

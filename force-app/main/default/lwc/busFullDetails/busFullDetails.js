@@ -1,4 +1,4 @@
-import { LightningElement} from 'lwc';
+import { LightningElement, api } from 'lwc';
 import { createMessageContext, releaseMessageContext,APPLICATION_SCOPE,subscribe, unsubscribe } from 'lightning/messageService';
 import SAMPLEMC from "@salesforce/messageChannel/SampleMessageChannel__c";
 
@@ -6,7 +6,7 @@ export default class busFullDetail extends LightningElement {
 context = createMessageContext();
 subscription = null;
 receivedMessage = '';
-busRec;
+@api busRec;
 objectApiName='Bus__c';
       /////////Subscriber/////
 
