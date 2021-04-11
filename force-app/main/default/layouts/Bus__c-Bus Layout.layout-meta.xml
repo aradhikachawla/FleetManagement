@@ -43,7 +43,6 @@
                 <behavior>Edit</behavior>
                 <field>Resale_Value__c</field>
             </layoutItems>
-            
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Latest_odometer_reading_when_serviced__c</field>
