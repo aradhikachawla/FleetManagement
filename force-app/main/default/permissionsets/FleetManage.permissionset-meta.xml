@@ -79,10 +79,6 @@
         <field>Bus__c.Odometer_Reading__c</field>
         <readable>true</readable>
     </fieldPermissions>
-<<<<<<< HEAD
-=======
-    
->>>>>>> d61886761edd5ff9e5a14d22d06c485922d9634a
     <fieldPermissions>
         <editable>true</editable>
         <field>Bus__c.Resale_Value__c</field>
@@ -186,10 +182,6 @@
         <object>Maintenance_record__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
-<<<<<<< HEAD
-=======
-    
->>>>>>> d61886761edd5ff9e5a14d22d06c485922d9634a
     <tabSettings>
         <tab>Bus__c</tab>
         <visibility>Visible</visibility>
