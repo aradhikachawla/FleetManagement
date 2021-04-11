@@ -3,8 +3,8 @@ public class TestDataFactory {
     
     public static List<Garage__c> createGarage(integer count){
         
-            List<Garage__c> allGarages = new  List<Garage__c>();
-
+        List<Garage__c> allGarages = new  List<Garage__c>();
+        try{
             for (integer i=1;i<=count;i++){     
        		 Garage__c newGargae =  new  Garage__c();
              newGargae.Name = 'Garage '+ Integer.valueOf(Math.random()*100) ; 
@@ -12,9 +12,12 @@ public class TestDataFactory {
         	 newGargae.Location__Longitude__s=Math.random()*100-10 ;
              allGarages.add(newGargae); 
             
-       }
-        System.debug('allGarages' + allGarages);
-        
+       		}
+        }
+        catch(Exception e){
+            System.debug('in catch:=createGarage'+ e.getStackTraceString());
+        }
+        System.debug('allGarages' + allGarages);       
         return allGarages;
         
     }
@@ -25,8 +28,9 @@ public class TestDataFactory {
     public static List<Bus__c> createBus(integer count){
     
     List<Bus__c> allBuses = new  List<Bus__c>();
-          //List<sensor__c> allsensors = new  List<sensor__c>();
-
+        try{
+           
+        
          for (integer i=1;i<=count;i++){     
        		 Bus__c newbus =  new  Bus__c();
              newbus.Name = 'Bus '+ Integer.valueOf(Math.random()*100) ; 
@@ -42,10 +46,14 @@ public class TestDataFactory {
              
              
       }
+        }
+        catch(Exception e){
+          System.debug('in catch:=createBus'+ e.getStackTraceString());
+
+        }
         
         
         
-    //    List<Bus__c> allBuses1 = new  List<Bus__c>();
          for (integer i=1;i<=count;i++){     
        		 Bus__c newbus =  new  Bus__c();
              newbus.Name = 'Bus '+ Integer.valueOf(Math.random()*100) ; 
@@ -61,7 +69,6 @@ public class TestDataFactory {
              
          }
         
-    //    List<Bus__c> allBuses2 = new  List<Bus__c>();
          for (integer i=1;i<=count;i++){     
        		 Bus__c newbus =  new  Bus__c();
              newbus.Name = 'Bus '+ Integer.valueOf(Math.random()*100) ; 
@@ -76,7 +83,6 @@ public class TestDataFactory {
              allBuses.add(newbus); 
              
          }
-    //    List<Bus__c> allBuses3 = new  List<Bus__c>();
          for (integer i=1;i<=count;i++){     
        		 Bus__c newbus =  new  Bus__c();
              newbus.Name = 'Bus '+ Integer.valueOf(Math.random()*100) ; 
@@ -90,7 +96,6 @@ public class TestDataFactory {
         	 newbus.Location__Longitude__s=Math.random()*100-10 ;
              allBuses.add(newbus);
          }
-     //   List<Bus__c> allBuses4 = new  List<Bus__c>();
          for (integer i=1;i<=count;i++){     
        		 Bus__c newbus =  new  Bus__c();
              newbus.Name = 'Bus '+ Integer.valueOf(Math.random()*100) ; 
@@ -121,10 +126,7 @@ public class TestDataFactory {
       }
         
         
-    //    allBuses.addall(allBuses1);
-    //    allBuses.addall(allBuses2);
-    //    allBuses.addall(allBuses3);
-    //    allBuses.addall(allBuses4);
+   
 
       System.debug(allBuses);
       return allBuses;

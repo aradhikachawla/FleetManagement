@@ -2,14 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	
 
-  <types>
-       <members>Bus__c-Bus Layout</members>
-       <name>Layout</name>
-   </types>
-   <types>
-       <members>Garage__c-Garage Layout</members>
-       <name>Layout</name>
-   </types>
+
+   
 <types>
       <members>BatchClassForMaintananceNew</members>
       <name>ApexClass</name>
@@ -23,88 +17,26 @@
       <members>BatchMainClassNew</members>
       <name>ApexClass</name>
   </types>
-  <types>
-      <members>BatchClassForMaintananceNew</members>
-      <name>ApexClass</name>
-  </types>
+  
 <types>
       <members>TestDataFactory</members>
       <name>ApexClass</name>
   </types>
-  <types>
-      <members>Bus__c.Location__c</members>
-      <name>CustomField</name>
-  </types>
+  
   <types>
       <members>DataCraetionClass</members>
       <name>ApexClass</name>
   </types>
   
-<types>
-      <members>MaintenanceSchedulableClass</members>
-      <name>ApexClass</name>
-  </types>
-<types>
-      <members>Garage__c</members>
-      <name>CustomObject</name>
-  </types>
-  <types>
-      <members>Bus__c</members>
-      <name>CustomObject</name>
-  </types>
- <types>
-      <members>Schedule_flow_for_nightly_job</members>
-      <name>Flow</name>
-  </types>
 
-<types>
-      <members>Fleet_Managment_System_UtilityBar</members>
-      <name>FlexiPage</name>
-    </types>
- <types>
-      <members>Create_the_data</members>
-      <name>Flow</name>
-</types>
-<types>
-      <members>Fleet_Managment_System</members>
-      <name>CustomApplication</name>
-  </types>
- <types>
-      <members>busDetail</members>
-      <name>LightningComponentBundle</name>
-  </types>
-  <types>
-      <members>busFullDetails</members>
-      <name>LightningComponentBundle</name>
-  </types>
-  <types>
-      <members>busResaleTile</members>
-      <name>LightningComponentBundle</name>
-  </types>
-  <types>
-      <members>busList</members>
-      <name>LightningComponentBundle</name>
-  </types>
+
   
-  <types>
-      <members>X60_seater_maintenance</members>
-      <name>Flow</name>
-  </types>
-  <types>
  
-      <members>Fleet_Buses</members>
-      <name>FlexiPage</name>
-  </types>
- <types>
-      <members>FleetManage</members>
-      <name>PermissionSet
-      </name>
-  </types>
-  <types>
-      <members>FleetManagement</members>
-      <name>PermissionSet
-      </name>
-  </types>
+
+
+
+ 
+  
 
 
     <version>51.0</version>
