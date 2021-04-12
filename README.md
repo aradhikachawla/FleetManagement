@@ -1,7 +1,8 @@
 
 1) Link to below steps:- https://docs.google.com/document/d/1Jhi2PrA4JQmhjl1v9GVA3t9bGFaVMEFXqvIV1oi04ds/edit?usp=sharing
 
-3) Link to Presentation powerpoint slides -  https://1drv.ms/p/s!AmVXbv4LwVfGb-xV77JY8CeEtUw?e=6kwDYx
+2) Link to Presentation powerpoint slides -  https://1drv.ms/p/s!AmVXbv4LwVfGb-xV77JY8CeEtUw?e=6kwDYx
+3) Two Pdfs uploaded - one is Powerpoint Presentation as pdf and other is question -1 ER Diagram 
 
  Steps to Install the  app, Fleet Management system into a Developer Edition Org or a Trailhead Playground
 1) git clone https://github.com/aradhikachawla/FleetManagement
