@@ -12,6 +12,9 @@ Steps to Install the  app, Fleet Management system into a Developer Edition Org 
 4) sfdx force:source:deploy -p force-app
 5) sfdx force:user:permset:assign -n FleetManagement
 
+Unmanaged package(in case needed to install the App)  - https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3t000002w0G6
+
+
 Step to Navigate to the App and verify the results
 
 7) Open the org and select the app  ‘Fleet Management system’  from App Launcher
