@@ -3,8 +3,6 @@
 
 3) Link to Presentation powerpoint slides -  https://1drv.ms/p/s!AmVXbv4LwVfGb-xV77JY8CeEtUw?e=6kwDYx
 
-Installing the App using a Developer Edition Org or a Trailhead Playground
-
 Steps to Install the  app, Fleet Management system into a Developer Edition Org or a Trailhead Playground
 1) git clone https://github.com/aradhikachawla/FleetManagement
 2) cd FleetManagement
