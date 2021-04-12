@@ -36,7 +36,9 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
              mainR.Bus__c = s.Id;
              mainR.Garage__c = calculateGarage(s).id;
              mainR.Recorded_odometer__c = s.Odometer_Reading__c;
+             mainR.Schedule_Time__c=DateTime.now();
              mainR.Schedule_reason__c = 'Every 5000 Miles Service';
+            
              listMain.add(mainR);
              
             // }
