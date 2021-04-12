@@ -148,7 +148,7 @@
         <editable>true</editable>
         <field>Maintenance_record__c.Tire_conditions__c</field>
         <readable>true</readable>
-    </fieldPermissions>   
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>FleetManagement</label>
     <objectPermissions>
