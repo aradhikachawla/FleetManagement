@@ -1,7 +1,7 @@
 @isTest
 public with sharing class CalculateResaleValueTest {
 	
-    
+    // These test will be testing for differnt capacity buses for differnt current status 
     @isTest
     static void test1(){
          List<Bus__c> allBuses = new  List<Bus__c>();

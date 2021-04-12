@@ -5,11 +5,12 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
       System.debug('BatchClassForMaintananceNew');
     }
 
-    
+    // This method will capture bus records that will be pulled in batch Apex
     public Database.QueryLocator start(Database.BatchableContext bc) 
     { 	try{
    		    System.debug('start');
-            List<Bus__c> listBus =   [SELECT Id, Name, Bus_ID__c, Odometer_Reading__c, Maximum_Capacity__c, Current_Status__c,  Location__Latitude__s,Location__Longitude__s,Schedule_for_service__c FROM Bus__c where  Schedule_for_service__c = true with SECURITY_ENFORCED];
+            // This list is just for figuring out what is coming up can be commented later actual is query loactor.
+            List<Bus__c> listBus =   [SELECT Id, Name, Bus_ID__c, Odometer_Reading__c, Maximum_Capacity__c, Current_Status__c,  Location__Latitude__s,Location__Longitude__s,Schedule_for_service__c FROM Bus__c where  Schedule_for_service__c = true with SECURITY_ENFORCED limit 50000];
             System.debug('listBus:'+ listBus);
     }catch(Exception e){
                   System.debug('in catch:'+ e.getStackTraceString()+e.getCause()+e.getMessage());
@@ -20,33 +21,53 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
     }
   
     
-     public void execute(Database.BatchableContext info, List<Bus__c> listBus) {		
+     // This method will execute bus records that are  being  pulled in batch Apex in start method
+     public void execute(Database.BatchableContext info, List<Bus__c> listBus) {
+         
    		 system.debug('execute');
 		 List<Maintenance_record__c> listMain = new List<Maintenance_record__c>();
-         
+         try{
+             
          for (Bus__c s: listBus){	
-           //  for (sensor__c sen: s.sensors__r){
              s.Current_Status__c = 'Scheduled for Maintenance' ;
              s.Latest_odometer_reading_when_serviced__c = s.Odometer_Reading__c;
-           //  s.loaction_of_the_bus__Latitude__s = sen.Location__Latitude__s;
-          //   s.loaction_of_the_bus__Longitude__s = sen.Location__Longitude__s;
-             System.debug(calculateGarage(s)); 
+           //  System.debug(calculateGarage(s)); 
              s.Garage__c = calculateGarage(s).id;
              Maintenance_record__c mainR = new Maintenance_record__c();
              mainR.Bus__c = s.Id;
              mainR.Garage__c = calculateGarage(s).id;
              mainR.Recorded_odometer__c = s.Odometer_Reading__c;
              mainR.Schedule_Time__c=DateTime.now();
-             mainR.Schedule_reason__c = 'Every 5000 Miles Service';
-            
+             mainR.Schedule_reason__c = 'Every 5000 Miles Service';          
              listMain.add(mainR);
+         }
+           ///// Inserting records in   Maintenance_record__c with partial success
+          	Database.SaveResult[] srList = Database.insert(listMain, false);
+            	for (Database.SaveResult sr : srList){
+            		for(Database.Error err : sr.getErrors()) {
+            			System.debug('The following error has occurred.');                    
+            			System.debug(err.getStatusCode() + ': ' + err.getMessage());
+            			System.debug('Bus fields that affected this error: ' + err.getFields());
+            		}
+             	}
              
-            // }
-         }       
-         
-         
-         insert listMain;
-         update  listBus;
+             
+             
+           ////// Updating Bus record for some fields
+           // Add below type of object and field level access check whenever doing any insert, update for every particular object 
+           if(Bus__c.SObjectType.getDescribe().isAccessible() &&
+               Bus__c.SObjectType.getDescribe().isQueryable() &&
+               Bus__c.SObjectType.getDescribe().isUpdateable() &&
+               Bus__c.SObjectType.getDescribe().isCreateable() &&
+               Schema.SObjectType.Bus__c.fields.Garage__c.isUpdateable() &&
+               Schema.SObjectType.Bus__c.fields.Latest_odometer_reading_when_serviced__c.isUpdateable() &&
+               Schema.SObjectType.Bus__c.fields.Current_Status__c.isUpdateable()){
+               Database.update(listBus, false); 
+               }
+         }
+           catch(Exception e){
+                  System.debug('in catch:'+ e.getStackTraceString()+e.getCause()+e.getMessage());
+          }
 
    }
     

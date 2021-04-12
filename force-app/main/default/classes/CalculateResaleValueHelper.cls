@@ -12,6 +12,7 @@ Resale Value is determined by:
 
 public with sharing class CalculateResaleValueHelper {
 
+    // This method is calculating resale value on the base of above logic
     public static void calculateResale(List<Bus__c> listBuses){
         System.debug('CalculateResaleValueHelperTrigger');
        
