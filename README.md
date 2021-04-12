@@ -1,6 +1,7 @@
 
-Link to below steps:- https://docs.google.com/document/d/1Jhi2PrA4JQmhjl1v9GVA3t9bGFaVMEFXqvIV1oi04ds/edit?usp=sharing
-Link to Presentation powerpoint slides -  https://1drv.ms/p/s!AmVXbv4LwVfGb-xV77JY8CeEtUw?e=6kwDYx
+1) Link to below steps:- https://docs.google.com/document/d/1Jhi2PrA4JQmhjl1v9GVA3t9bGFaVMEFXqvIV1oi04ds/edit?usp=sharing
+
+3) Link to Presentation powerpoint slides -  https://1drv.ms/p/s!AmVXbv4LwVfGb-xV77JY8CeEtUw?e=6kwDYx
 
 Installing the App using a Developer Edition Org or a Trailhead Playground
 
@@ -21,22 +22,22 @@ Steps to Install the  app, Fleet Management system into a Developer Edition Org 
 Question 1 - ER Diagram (included in Presentation)
 
 Question 2 - Apex Trigger 
-CalculateResaleValue
-CalculateResaleValueHelper
-CalculateResaleValueTest
+1) CalculateResaleValue
+2) CalculateResaleValueHelper
+3) CalculateResaleValueTest
 
 Question 3 -App ‘Fleet Management Systems’ 
-Lightning Page - Fleet Buses
-LWC - busBeerList, BusBeerTile, busFullDetail, busDetail, busResaleTile
-Apex Class -LWCController
+1)Lightning Page - Fleet Buses
+2) LWC - busBeerList, BusBeerTile, busFullDetail, busDetail, busResaleTile
+3) Apex Class -LWCController
 
 Question 4 - Batch File / Schedulable file
-BatchClassForMaintananceNew
-BatchMainClassNew
-MaintenanceSchedulableClass
-MaintenanceSchedulableClassTest
-Flow - Schedule flow for nightly job
-Flow - 60 seater Bus maintenance
+1) BatchClassForMaintananceNew
+2) BatchMainClassNew
+3) MaintenanceSchedulableClass
+4)MaintenanceSchedulableClassTest
+5)Flow - Schedule flow for nightly job
+6) Flow - 60 seater Bus maintenance
 
 Note : Data Creation flow has been created for Bus and Garage and added - Flow - Create the Data.
 
