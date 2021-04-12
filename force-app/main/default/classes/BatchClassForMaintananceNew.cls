@@ -51,11 +51,9 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
             		}
              	}
              
-             
-             
            ////// Updating Bus record for some fields
            // Add below type of object and field level access check whenever doing any insert, update for every particular object 
-           if(Bus__c.SObjectType.getDescribe().isAccessible() &&
+        /* if(Bus__c.SObjectType.getDescribe().isAccessible() &&
                Bus__c.SObjectType.getDescribe().isQueryable() &&
                Bus__c.SObjectType.getDescribe().isUpdateable() &&
                Bus__c.SObjectType.getDescribe().isCreateable() &&
@@ -63,9 +61,12 @@ public with sharing class BatchClassForMaintananceNew implements Database.Batcha
                Schema.SObjectType.Bus__c.fields.Latest_odometer_reading_when_serviced__c.isUpdateable() &&
                Schema.SObjectType.Bus__c.fields.Current_Status__c.isUpdateable()){
                Database.update(listBus, false); 
-               }
+               }*/
+         
+             
+         Database.update(listBus, false); 
          }
-           catch(Exception e){
+         catch(Exception e){
                   System.debug('in catch:'+ e.getStackTraceString()+e.getCause()+e.getMessage());
           }
 
