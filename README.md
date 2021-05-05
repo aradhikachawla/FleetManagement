@@ -7,6 +7,8 @@ This readme file is uploaded as google doc so can be accessed and saved as  :- h
 
 2) two Pdfs uploaded Powerpoint Presentation as pdf for demo for the App built and one as the expected results for the deployment from  github
 
+3) This App can be installed in two way, either  github or using unmanaged package to install
+
 Steps to Install the  app, Fleet Management system into a Developer Edition Org or a Trailhead Playground
  
        1)  git clone https://github.com/aradhikachawla/FleetManagement
@@ -39,7 +41,7 @@ Apex Trigger
 
 App ‘Fleet Management Systems’ 
 1) Lightning Page - Fleet Buses
-2) LWC - busBeerList, BusBeerTile, busFullDetail, busDetail, busResaleTile
+2) LWCs - busBeerList, BusBeerTile, busFullDetail, busDetail, busResaleTile
 3) Apex Class -LWCController
 
 Batch File / Schedulable file
