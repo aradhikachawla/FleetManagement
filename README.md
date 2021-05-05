@@ -29,6 +29,8 @@ Step to Navigate to the App and verify the results
 11) Flow on Fleet Buses  can be used any time to run the batch file to kick off the maintenance records for 5000 miles service for 60 seater buses
 
 
+Note : Data Creation flow has been created for Bus and Garage and added - Flow - Create the Data.
+
 
 Apex Trigger 
 1) CalculateResaleValue
@@ -36,7 +38,7 @@ Apex Trigger
 3) CalculateResaleValueTest
 
 App ‘Fleet Management Systems’ 
-1)Lightning Page - Fleet Buses
+1) Lightning Page - Fleet Buses
 2) LWC - busBeerList, BusBeerTile, busFullDetail, busDetail, busResaleTile
 3) Apex Class -LWCController
 
@@ -47,6 +49,8 @@ Batch File / Schedulable file
 4) MaintenanceSchedulableClassTest
 5) Flow - Schedule flow for nightly job
 6) Flow - 60 seater Bus maintenance
+
+
 
 Note : Data Creation flow has been created for Bus and Garage and added - Flow - Create the Data.
 
