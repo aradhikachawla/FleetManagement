@@ -7,12 +7,12 @@ export default class BusBeerTile extends LightningElement {
 @api selectedBus='';
 
 get tileClass() {
-          return this.selectedBus ? TILE_WRAPPER_UNSELECTED_CLASS : TILE_WRAPPER_SELECTED_CLASS;
+          return this.busRec.Id==this.selectedBus ? TILE_WRAPPER_SELECTED_CLASS : TILE_WRAPPER_UNSELECTED_CLASS;
           }
 
 @api selectBus(event){ 
-          this.selectedBus=!this.selectedBus;
-          event.preventDefault(); 
+       //   this.selectedBus=!this.selectedBus;
+       //    event.preventDefault(); 
                  
           const busSelect = new CustomEvent("busselect", 
           {
