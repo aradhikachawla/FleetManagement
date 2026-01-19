@@ -63,6 +63,9 @@ Note : Data Creation flow has been created for Bus and Garage and added - Flow -
  
 Link to above all instructions google doc- https://docs.google.com/document/d/1Jhi2PrA4JQmhjl1v9GVA3t9bGFaVMEFXqvIV1oi04ds/edit#
 
+Video of the whole project - >  https://www.youtube.com/watch?v=Avo1oihzd6o
+
+
  
 
 
